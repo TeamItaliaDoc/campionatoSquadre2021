@@ -217,6 +217,31 @@
     cursor: pointer;
     background-color: transparent;
 }
+/* TABELLA SQUADRE */
+.squadre-colPos {
+    width:10px;
+    text-align:center;
+} 
+.squadre-col1 {
+    width:120px;
+    text-align:left;
+} 
+.squadre-colICO {
+    width:40px;
+    text-align:left;
+} 
+.squadre-col1SEP {
+    width:10px;
+    text-align:left;
+} 
+.squadre-col2 {
+    width:220px;
+    text-align:left;
+} 
+.squadre-col3 {
+    width:120px;
+    text-align:left;
+} 
 /* TABELLA GIRONI */
 .gironi-tabella
 {

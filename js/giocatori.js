@@ -88,7 +88,7 @@ function getEloUrl(url)
             calcolaClassificaGiocatoriRun = true;
 
         //Calcolo clasifica
-        calcolaClassificaGiocatori();
+        calcolaClassifica();
 
     }).error(function(jqXhr, textStatus, error) {
         //è andato in errore ricarico i dati
