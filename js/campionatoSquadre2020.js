@@ -325,6 +325,10 @@ function caricaMatch(index, url)
                     risultato = 'win';
                 risultato = data.teams.team2.players[i].played_as_black;
                 setPunti(username2, risultato);
+                //Confera per aver giocato in questo campionato
+                giocatori[username1].giocatoCampionato = true;
+                giocatori[username2].giocatoCampionato = true;
+
             }
         }
 
@@ -570,7 +574,7 @@ function stampaSquadre(index)
     var eloTot = 0;
     for (i in teams[index].giocatori) {
         elencoGiocatori += giocatori[teams[index].giocatori[i]].displayName + '<br>';
-        if (giocatori[teams[index].giocatori[i]].vinte + giocatori[teams[index].giocatori[i]].perse + giocatori[teams[index].giocatori[i]].patte > 0)
+        if (giocatori[teams[index].giocatori[i]].giocatoCampionato)
             giocatoriAttivi ++;
         eloTot += giocatori[teams[index].giocatori[i]].elo;
     }

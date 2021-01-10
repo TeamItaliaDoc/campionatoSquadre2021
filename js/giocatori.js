@@ -114,6 +114,7 @@ function creaGiocatore(apiUsername) {
     giocatori[username].patte = 0;
     giocatori[username].userVinte = [];
     giocatori[username].userPatte = [];
+    giocatori[username].giocatoCampionato = false;
 }
 
 function setPunti(username, risultato)
@@ -173,7 +174,8 @@ function calcolaClassificaGiocatori()
         maxSpareggio = -1;
         for (var i in giocatori)
         {
-            if ((bannati.indexOf(giocatori[i].username) == -1) && (giocatori[i].posizione == 0) && (giocatori[i].punti > max || (giocatori[i].punti == max) && giocatori[i].puntiSpareggio > maxSpareggio)) {
+            if ((bannati.indexOf(giocatori[i].username) == -1) &&  (giocatori[i].giocatoCampionato) &&
+               (giocatori[i].posizione == 0) && (giocatori[i].punti > max || (giocatori[i].punti == max) && giocatori[i].puntiSpareggio > maxSpareggio)) {
                 username = i;
                 max = giocatori[i].punti;
                 maxSpareggio = giocatori[i].puntiSpareggio;
