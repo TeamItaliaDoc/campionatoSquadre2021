@@ -281,11 +281,6 @@ function caricaMatch(index, url)
             if (matchs[index].boards * 2 == matchs[index].Punti1 + matchs[index].Punti2)
             {
                 matchs[index].concluso = true;
-                //Penalità
-                teams[team1].puntiMatchConclusi -= matchs[index].penalità1;;
-                teams[team2].puntiMatchConclusi -= matchs[index].penalità2;;
-                teams[team1].penalità += matchs[index].penalità1;
-                teams[team2].penalità += matchs[index].penalità2;
                 //
                 teams[team1].matchConclusi ++;
                 teams[team2].matchConclusi ++;
@@ -294,13 +289,28 @@ function caricaMatch(index, url)
                 teams[team1].vittorieConclusi += matchs[index].vittorie1;
                 teams[team2].vittorieConclusi += matchs[index].vittorie2;
                 if (matchs[index].Punti1 > matchs[index].Punti2)
+                {
                     teams[team1].puntiMatchConclusi ++;
+                    //Penalità
+                    teams[team1].puntiMatchConclusi -= matchs[index].penalità1;
+                    teams[team2].puntiMatchConclusi -= matchs[index].penalità2;
+                }
                 if (matchs[index].Punti1 < matchs[index].Punti2)
+                {
                     teams[team2].puntiMatchConclusi ++;
+                    //Penalità
+                    teams[team1].penalità += matchs[index].penalità1;
+                    teams[team2].penalità += matchs[index].penalità2;
+                }
                 if (matchs[index].Punti1 == matchs[index].Punti2)
                 {
                     teams[team1].puntiMatchConclusi += 0.5;
                     teams[team2].puntiMatchConclusi += 0.5;
+                    //Penalità
+                    teams[team1].puntiMatchConclusi -= matchs[index].penalità1;
+                    teams[team2].puntiMatchConclusi -= matchs[index].penalità2;
+                    teams[team1].penalità += matchs[index].penalità1;
+                    teams[team2].penalità += matchs[index].penalità2;
                 }
             }
             //Controllo giocatori
