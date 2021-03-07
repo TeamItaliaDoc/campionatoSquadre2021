@@ -100,7 +100,7 @@ matchs[116] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalit
 function elabora() {
     //Carico i dati di tutti i teams
     for (var i in teams) {
-        sleep(50);
+        sleep(5);
         caricaTeams(teams[i].urlMembri);
     };
 }
@@ -163,7 +163,7 @@ function caricaTeams(urlMembri) {
 
                 //Carico i dati di tutti i match
                 for (var i in matchs) {
-                    sleep(50);
+                    sleep(5);
 
                     caricaMatch(i, matchs[i].id);
                 };
