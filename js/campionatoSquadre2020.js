@@ -101,78 +101,95 @@ function elabora() {
     //Carico i dati di tutti i teams
     for (var i in teams) {
         sleep(50);
-        caricaTeams(i, teams[i].urlMembri);
+        caricaTeams(teams[i].urlMembri);
     };
 }
 
-function caricaTeams(iTeam, urlMembri) {
+function caricaTeams(urlMembri) {
 
+    console.log('Inzio caricaTeams: ' + urlMembri)
     
     //Leggo i dati 
     $.getJSON(urlMembri,function(data){
 
-        //Creao lista giocatori tema
-        teams[iTeam].giocatori = [];
+        //Cerco teams, potrebbero non arrivare in ordine corretto
+        for (var myTeam in teams) {
+            if (this.url.indexOf(myTeam) > -1)
+            {
 
-        //Carico tutti i giocatori
-        for (var i in data.weekly) {
-            if (data.weekly[i].username != 'themoonlightknight') {
-                teams[iTeam].giocatori.push(data.weekly[i].username);
-                //Creo giocatore nella lista principale
-                creaGiocatore(data.weekly[i].username);
-            }
-        }
-        for (var i in data.monthly) {
-            if (data.monthly[i].username != 'themoonlightknight') {
-                teams[iTeam].giocatori.push(data.monthly[i].username);
-                //Creo giocatore nella lista principale
-                creaGiocatore(data.monthly[i].username);
-            }
-        }
-        for (var i in data.all_time) {
-            if (data.all_time[i].username != 'themoonlightknight') {
-                teams[iTeam].giocatori.push(data.all_time[i].username);
-                //Creo giocatore nella lista principale
-                creaGiocatore(data.all_time[i].username);
-            }
-        }
-        //Se ho caricato tutti i dati carico le partite
-        teams[iTeam].daCaricare = false;
-        for (var i in teams) {
-            if (teams[i].daCaricare) {
-                return;
-            }
-        }
+                console.log('Letti dati team: ' + myTeam + ' - ' + this.url);
+
+                //Creao lista giocatori tema
+                teams[myTeam].giocatori = [];
+
+                //Carico tutti i giocatori
+                for (var i in data.weekly) {
+                    if (data.weekly[i].username != 'themoonlightknight') {
+                        teams[myTeam].giocatori.push(data.weekly[i].username);
+                        //Creo giocatore nella lista principale
+                        creaGiocatore(data.weekly[i].username);
+                    }
+                }
+                for (var i in data.monthly) {
+                    if (data.monthly[i].username != 'themoonlightknight') {
+                        teams[myTeam].giocatori.push(data.monthly[i].username);
+                        //Creo giocatore nella lista principale
+                        creaGiocatore(data.monthly[i].username);
+                    }
+                }
+                for (var i in data.all_time) {
+                    if (data.all_time[i].username != 'themoonlightknight') {
+                        teams[myTeam].giocatori.push(data.all_time[i].username);
+                        //Creo giocatore nella lista principale
+                        creaGiocatore(data.all_time[i].username);
+                    }
+                }
+                //Se ho caricato tutti i dati carico le partite
+                console.log('caricaTeams. Imposto caricato Team: ' + myTeam)
+                teams[myTeam].daCaricare = false;
+                for (var i in teams) {
+                    if (teams[i].daCaricare) {
+                        console.log('caricaTeams. Team non caricato: ' + myTeam)
+                        return;
+                    }
+                }
         
-        //controllo di non aver già lanciato fase sucessiva
-        if (calcolaTeamsRun)
-            return;  
-        calcolaTeamsRun = true;
+                //controllo di non aver già lanciato fase sucessiva
+                if (calcolaTeamsRun)
+                    return;  
+                calcolaTeamsRun = true;
 
-        //Carico i dati di tutti i match
-        for (var i in matchs) {
-            sleep(50);
+                console.log('Inizio caricamento match');
 
-            caricaMatch(i, matchs[i].id);
-        };
+                //Carico i dati di tutti i match
+                for (var i in matchs) {
+                    sleep(50);
+
+                    caricaMatch(i, matchs[i].id);
+                };
+            }
+        }
 
     }).error(function(jqXhr, textStatus, error) {
         //è andato in errore ricarico i dati
         //Se responseJSON non è valorizzato solo se il record esiste    
         if (! jqXhr.responseJSON)
         {
-            console.log('ERRORE ricarico dati: ' + this.url);
+            console.log('ERRORE ricarico team: ' + this.url);
             var index = 0;
                 for (var i in teams) {
                     if (teams[i].urlMembri = this.url)
                         index = i;
                 };
+
+                console.log('ERRORE lancio ricarica team: ' + index);
                 caricaTeams(index, this.url);    
             } else {
                 console.log('ERRORE Teams non valida. ' + this.url);
                 console.log('ERRORE Teams non valida. ' + this.url);
                 console.log('ERRORE Teams non valida. ' + this.url);
                 console.log('ERRORE Teams non valida. ' + this.url);
+                console.log('-------- non ricarico TEAMS');
             }
               
         });
@@ -181,9 +198,13 @@ function caricaTeams(iTeam, urlMembri) {
 function caricaMatch(index, url)
 {
 
+    console.log('caricaMatch ' + index + ' - ' + url);
 
     //Leggo i dati 
     $.getJSON(url,function(data){
+
+
+    console.log('caricaMatch. Dati di ' + this.url);
 
         if (data.status != 'registration') 
         {
@@ -354,6 +375,7 @@ function caricaMatch(index, url)
         matchs[index].daCaricare = false;
         for (var i in matchs) {
             if (matchs[i].daCaricare) {
+                console.log('caricaMatch. Match da caricare: ' + i);
                 return;
             }
         }
@@ -363,7 +385,9 @@ function caricaMatch(index, url)
             return;  
             calcolaClassificaRun = true;
 
-        //Ricerco elo e stampo classifica giocatori
+         console.log('caricaMatch. Inizio getAvatar');
+
+         //Ricerco elo e stampo classifica giocatori
         getAvatar();
     
     }).error(function(jqXhr, textStatus, error) {
@@ -377,6 +401,7 @@ function caricaMatch(index, url)
                     if (matchs[i].url = this.url)
                         index = i;
                 };
+                console.log('ERRORE ricarico dati: ricarico match ' + index);
                 caricaMatch(index, this.url);    
             } else {
                 console.log('ERRORE Match non valida. ' + this.url);
