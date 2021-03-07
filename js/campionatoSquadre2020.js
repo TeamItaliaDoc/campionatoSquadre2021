@@ -100,11 +100,14 @@ matchs[116] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalit
 function elabora() {
     //Carico i dati di tutti i teams
     for (var i in teams) {
+        sleep(50);
         caricaTeams(i, teams[i].urlMembri);
     };
 }
 
 function caricaTeams(iTeam, urlMembri) {
+
+    
     //Leggo i dati 
     $.getJSON(urlMembri,function(data){
 
@@ -148,6 +151,8 @@ function caricaTeams(iTeam, urlMembri) {
 
         //Carico i dati di tutti i match
         for (var i in matchs) {
+            sleep(50);
+
             caricaMatch(i, matchs[i].id);
         };
 
@@ -175,6 +180,8 @@ function caricaTeams(iTeam, urlMembri) {
 
 function caricaMatch(index, url)
 {
+
+
     //Leggo i dati 
     $.getJSON(url,function(data){
 
@@ -621,5 +628,15 @@ function stampaSquadre(index)
         '<td class="squadre-col3">' + eloTot.toLocaleString() + '</td>' +
         '<td class="squadre-col3">' + parseInt(eloMedio).toLocaleString() + '</td>' +
     '</tr>');
-    
+
+
 }
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }
+  }     

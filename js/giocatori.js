@@ -60,6 +60,7 @@ function getElo()
 {
     //Cerco l'avatar per tutti i giocatori
     for (var username in giocatori) {
+        sleep(50);
         //Cerco avatar
         getEloUrl('https://api.chess.com/pub/player/' + username + '/stats');
     }    
@@ -227,4 +228,15 @@ function stampaGiocatore(username)
         '</td>' +
         '</tr>'
     );
+
+  
 }
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }
+  }     
