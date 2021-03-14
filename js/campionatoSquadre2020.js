@@ -176,13 +176,14 @@ function caricaTeams(urlMembri) {
         if (! jqXhr.responseJSON)
         {
             console.log('ERRORE ricarico team: ' + this.url);
-            var index = 0;
-                for (var i in teams) {
-                    if (teams[i].urlMembri = this.url)
-                        index = i;
-                };
+           //-- var index = 0;
+           //     for (var i in teams) {
+           //         if (teams[i].urlMembri = this.url)
+           //             index = i;
+           //     };
 
-                console.log('ERRORE lancio ricarica team: ' + index);
+                console.log('ERRORE lancio ricarica team: ' + this.url);
+                console.log('..............: ' + this.url);
                 caricaTeams(index, this.url);    
             } else {
                 console.log('ERRORE Teams non valida. ' + this.url);
