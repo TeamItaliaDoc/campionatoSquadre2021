@@ -184,7 +184,7 @@ function caricaTeams(urlMembri) {
 
                 console.log('ERRORE lancio ricarica team: ' + this.url);
                 console.log('..............: ' + this.url);
-                caricaTeams(index, this.url);    
+                caricaTeams(this.url);    
             } else {
                 console.log('ERRORE Teams non valida. ' + this.url);
                 console.log('ERRORE Teams non valida. ' + this.url);
