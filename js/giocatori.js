@@ -98,12 +98,13 @@ function getEloUrl(url)
 
 }
 
-function creaGiocatore(apiUsername) {
+function creaGiocatore(apiUsername, squadra) {
     //Uso apiUsername perchè così posso inviare sia username che displayname
     var username = apiUsername.toLowerCase()
     giocatori[username] = {};
     giocatori[username].username = username;
     giocatori[username].url = '';
+    giocatori[username].squadra = squadra;
     giocatori[username].displayName = '';
     //lo assegno quando lo trovo giocatori[username].avatar = '';
     //lo assegno quando lo trovo giocatori[username].elo = 0;
@@ -116,13 +117,17 @@ function creaGiocatore(apiUsername) {
     giocatori[username].userVinte = [];
     giocatori[username].userPatte = [];
     giocatori[username].giocatoCampionato = false;
+
+    //Se si è ritirato da una squadra lo metto tra i bannati
+    if (squadra == '')
+        bannati.push(apiUsername);
 }
 
 function setPunti(username, risultato)
 {
     //Se non esiste lo creo
     if (! giocatori[username]) {
-        creaGiocatore(username);
+        creaGiocatore(username, '');  //Se viene creato qui vuol dire che si è ritirato dalla squadra
     }
 
     //Se risultato non definito la partita non è finita
@@ -204,6 +209,7 @@ function calcolaClassificaGiocatori()
  
 function stampaGiocatore(username)
 {
+    console.log('stampaGiocatore: ' + username + ' - ' + giocatori[username].squadra);
     //stampo riga    
     $("#giocatori").append('<tr class="classifica-giocatori">' +
         '<td class="classifica-col1">' + giocatori[username].posizione + '</td>' +  
@@ -220,6 +226,18 @@ function stampaGiocatore(username)
         '        </td>' +    
         '    </tr></table>' +
         '</td>' +
+        '<td class="classifica-col2">' +
+        '    <table><tr>' +
+        '        <td>' +
+        '        <img class="classifica-avatar" src="' + teams[giocatori[username].squadra].icon + '">' +
+        '    </td>' +
+        '    <td width=7px></td>' +
+        '    <td><div>' +
+        '            <a class="username" href="' + teams[giocatori[username].squadra].urlMembri + '" target=”_blank”> ' + teams[giocatori[username].squadra].name + '</a>' +
+        '        </div> <div>  (' + giocatori[username].elo + ') </div>' +
+        '        </td>' +    
+        '    </tr></table>' +
+        '</td>' +        
         '<td class="classifica-col3">' + giocatori[username].punti +'</td>' +
        // '<td class="classifica-col3">' + giocatori[username].puntiSpareggio +'</td>' +
         '<td class="classifica-col4"> <span class="game-win">' +  giocatori[username].vinte + ' W</span> /'+

@@ -61,14 +61,14 @@ matchs[64] = {"id":"https://api.chess.com/pub/match/1215086", "penalità1":0, "p
 matchs[65] = {"id":"https://api.chess.com/pub/match/1215088", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 matchs[66] = {"id":"https://api.chess.com/pub/match/1215090", "penalità1":0.5, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 
-/*matchs[71] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[72] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[73] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[74] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[75] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[76] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[71] = {"id":"https://api.chess.com/pub/match/1227114", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[72] = {"id":"https://api.chess.com/pub/match/1227118", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[73] = {"id":"https://api.chess.com/pub/match/1227120", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[74] = {"id":"https://api.chess.com/pub/match/1227122", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[75] = {"id":"https://api.chess.com/pub/match/1227124", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[76] = {"id":"https://api.chess.com/pub/match/1227126", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 
-matchs[81] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+/*matchs[81] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 matchs[82] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 matchs[83] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 matchs[84] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
@@ -121,27 +121,26 @@ function caricaTeams(urlMembri) {
 
                 //Creao lista giocatori tema
                 teams[myTeam].giocatori = [];
-
                 //Carico tutti i giocatori
                 for (var i in data.weekly) {
                     if (data.weekly[i].username != 'themoonlightknight') {
                         teams[myTeam].giocatori.push(data.weekly[i].username);
                         //Creo giocatore nella lista principale
-                        creaGiocatore(data.weekly[i].username);
+                        creaGiocatore(data.weekly[i].username, myTeam);
                     }
                 }
                 for (var i in data.monthly) {
                     if (data.monthly[i].username != 'themoonlightknight') {
                         teams[myTeam].giocatori.push(data.monthly[i].username);
                         //Creo giocatore nella lista principale
-                        creaGiocatore(data.monthly[i].username);
+                        creaGiocatore(data.monthly[i].username, myTeam);
                     }
                 }
                 for (var i in data.all_time) {
                     if (data.all_time[i].username != 'themoonlightknight') {
                         teams[myTeam].giocatori.push(data.all_time[i].username);
                         //Creo giocatore nella lista principale
-                        creaGiocatore(data.all_time[i].username);
+                        creaGiocatore(data.all_time[i].username, myTeam);
                     }
                 }
                 //Se ho caricato tutti i dati carico le partite
@@ -201,6 +200,7 @@ function caricaMatch(index, url)
 
     console.log('caricaMatch ' + index + ' - ' + url);
 
+    console.log(giocatori);
     //Leggo i dati 
     $.getJSON(url,function(data){
 
@@ -215,6 +215,11 @@ function caricaMatch(index, url)
             //salvo bannati della partita
             var bannatiBoard = [];
             for (var i in data.teams.team1.players) {
+                if (! data.teams.team1.players[i])
+                    console.log(data.teams.team1.players[i]);
+                    if (! data.teams.team2.players[i])
+                    console.log(data.teams.team2.players[i]);
+            
                 if (data.teams.team1.players[i].status == 'closed:fair_play_violations' ) {
                     bannatiBoard.push(data.teams.team1.players[i].board);
                     bannati.push(data.teams.team1.players[i].username);
