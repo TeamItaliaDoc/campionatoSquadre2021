@@ -18,6 +18,19 @@ teams['straccetti-e-broccoli-doc']={"name":"Straccetti e Broccoli DOC","club_id"
 teams['team-fastfood-doc']={"name":"Team FastFood DOC","club_id":79318,"urlMembri":"https://api.chess.com/pub/club/team-fastfood-doc/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79318.d534e8da.50x50o.927f535ba0c6.png","url":"https://www.chess.com/club/team-fastfood-doc","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "vittorieConclusi":0, "mediaConclusi":0, "finaleConclusi":"", "teamVinte" : [], "teamPatte" : [], "penalità":0, "daCaricare":true};
 
 var matchs = [];
+/*
+matchs[114] = {"id":"https://api.chess.com/pub/match/1267517", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[66] = {"id":"https://api.chess.com/pub/match/1215090", "penalità1":0.5, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[46] = {"id":"https://api.chess.com/pub/match/1196702", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[56] = {"id":"https://api.chess.com/pub/match/1205240", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[36] = {"id":"https://api.chess.com/pub/match/1188930", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[101] = {"id":"https://api.chess.com/pub/match/1257603", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[16] = {"id":"https://api.chess.com/pub/match/1172106", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[76] = {"id":"https://api.chess.com/pub/match/1227126", "penalità1":0.5, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[96] = {"id":"https://api.chess.com/pub/match/1249131", "penalità1":0.5, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[26] = {"id":"https://api.chess.com/pub/match/1179492", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[85] = {"id":"https://api.chess.com/pub/match/1236860", "penalità1":0.5, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+*/
 matchs[11] = {"id":"https://api.chess.com/pub/match/1172092", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 matchs[12] = {"id":"https://api.chess.com/pub/match/1172094", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 matchs[13] = {"id":"https://api.chess.com/pub/match/1172096", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
@@ -89,13 +102,13 @@ matchs[104] = {"id":"https://api.chess.com/pub/match/1257597", "penalità1":0, "
 matchs[105] = {"id":"https://api.chess.com/pub/match/1257591", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 matchs[106] = {"id":"https://api.chess.com/pub/match/1257593", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
 
-/*matchs[111] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[112] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[113] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[114] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[115] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-matchs[116] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
-*/
+matchs[111] = {"id":"https://api.chess.com/pub/match/1267509", "penalità1":0.5, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[112] = {"id":"https://api.chess.com/pub/match/1267511", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[113] = {"id":"https://api.chess.com/pub/match/1267503", "penalità1":0.5, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[114] = {"id":"https://api.chess.com/pub/match/1267517", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[115] = {"id":"https://api.chess.com/pub/match/1267513", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+matchs[116] = {"id":"https://api.chess.com/pub/match/1267507", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "vittorie1":0, "vittorie2":0,  "nGiocatori1":0,  "nGiocatori2":0};
+
 
 function elabora() {
     //Carico i dati di tutti i teams
@@ -327,13 +340,13 @@ function caricaMatch(index, url)
                     teams[team1].puntiMatchConclusi ++;
                     //Penalità
                     teams[team1].puntiMatchConclusi -= matchs[index].penalità1;
-                    teams[team2].puntiMatchConclusi -= matchs[index].penalità2;
+                    teams[team1].penalità += matchs[index].penalità1;
                 }
                 if (matchs[index].Punti1 < matchs[index].Punti2)
                 {
                     teams[team2].puntiMatchConclusi ++;
                     //Penalità
-                    teams[team1].penalità += matchs[index].penalità1;
+                    teams[team2].puntiMatchConclusi -= matchs[index].penalità2;
                     teams[team2].penalità += matchs[index].penalità2;
                 }
                 if (matchs[index].Punti1 == matchs[index].Punti2)
@@ -578,21 +591,21 @@ function calcolaClassifica()
                         //Pareggio
                         if (Punti1 == Punti2)
                         {
-                            risultato = '0.5 - 0.5 <BR> (' + Punti1 + ' - ' + Punti2 + ')';
+                            risultato = penalità1 + '0.5 - 0.5' + penalità2 + ' <BR> (' + Punti1 + ' - ' + Punti2 + ')';
                             stileTD = 'style="background-color:#84b2ed;border: 1px solid black;"';   //PAREGGIO
                             stile = 'color:black;font-weight: bold;';
                         } 
                         //Vinto team 1
                         if (Punti1 > Punti2)
                         {
-                            risultato = '1 - 0 <BR> (' + Punti1 + ' - ' + Punti2 + ')';
+                            risultato = penalità1 + '1 - 0'  + ' <BR> (' + Punti1 + ' - ' + Punti2 + ')';
                             stileTD = 'style="background-color:#4bc74b;border: 1px solid black;"'; //VINTO
                             stile = 'color:black;font-weight: bold;';
                         } 
                         //Vinto team 2
                         if (Punti1 < Punti2)
                         {
-                            risultato = '0 - 1 <BR> (' + Punti1 + ' - ' + Punti2 + ')';
+                            risultato =  '0 - 1' + penalità2 + ' <BR> (' + Punti1 + ' - ' + Punti2 + ')';
                             stileTD = 'style="background-color:#f75959;border: 1px solid black;"';  //PERSO
                             stile = 'color:black;font-weight: bold;';
                         } 
