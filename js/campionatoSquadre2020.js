@@ -513,8 +513,8 @@ function calcolaClassifica()
             '<td class="classifica-icon" style="background-color:#E2E2FF;">Pos.</td> <td style="background-color:#E2E2FF;">Team</td><td style="background-color:#E2E2FF;"></td>'+
             '<td class="classifica-icon">Punti</td>' +
             '<td class="classifica-icon">Punti partita</td><td class="classifica-icon" >Vittorie</td>' +
-            '<td class="classifica-icon">Penalità maturate</td>' +
             '<td class="classifica-icon">Penalità assegnate</td>' +
+            '<td class="classifica-icon">Penalità maturate</td>' +
             '<td class="classifica-col1SEP"></td>'; 
     for (var i in classificaTeams)         
         stRiga += '<td  class="classifica-icon">  <img class="classifica-avatar" src="' + teams[classificaTeams[i]].icon + '">';
