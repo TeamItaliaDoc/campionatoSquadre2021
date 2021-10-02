@@ -7,7 +7,7 @@ var teams = [];
 teams['chianti-doc']={"name":"Chianti DOC","club_id":79546,"urlMembri":"https://api.chess.com/pub/club/chianti-doc/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79546.b573e269.50x50o.8ba13052ce81.png","url":"https://www.chess.com/club/chianti-doc","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "vittorieConclusi":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
 teams['gli-abbacchi-doc']={"name":"Gli Abbacchi DOC", "club_id":79500,"urlMembri":"https://api.chess.com/pub/club/gli-abbacchi-doc/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79500.7464f9c4.50x50o.f127823db225.png","url":"https://www.chess.com/club/gli-abbacchi-doc","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "vittorieConclusi":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
 teams['gli-scaciucchi']={"name":"Gli Scaciucchi","club_id":79502,"urlMembri":"https://api.chess.com/pub/club/gli-scaciucchi/members","icon":"https://www.chess.com/club/join/79502","icon":"https://images.chesscomfiles.com/uploads/v1/group/79502.b4925ba9.50x50o.5c6b00a69cd6.png","url":"https://www.chess.com/club/gli-scaciucchi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "vittorieConclusi":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-teams['gli-ultimi-saranno-i-primi']={"name":"gli ultimi saranno i primi","club_id":78984,"urlMembri":"https://api.chess.com/pub/club/gli-ultimi-saranno-i-primi","icon":"https://images.chesscomfiles.com/uploads/v1/group/78984.0fe19eef.50x50o.008a63d2fd9a.jpeg","url":"https://www.chess.com/club/gli-ultimi-saranno-i-primi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "vittorieConclusi":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+teams['gli-ultimi-saranno-i-primi']={"name":"gli ultimi saranno i primi","club_id":78984,"urlMembri":"","icon":"https://images.chesscomfiles.com/uploads/v1/group/78984.0fe19eef.50x50o.008a63d2fd9a.jpeg","url":"https://www.chess.com/club/gli-ultimi-saranno-i-primi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "vittorieConclusi":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
 teams['i-bagna-cauda']={"name":"I Bagna Cauda","club_id":79538,"urlMembri":"https://api.chess.com/pub/club/i-bagna-cauda/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79538.2add8a97.50x50o.ad97c61746e8.png","url":"https://www.chess.com/club/i-bagna-cauda","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "vittorieConclusi":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
 teams['i-4-formaggi-doc']={"name":"I 4 Formaggi DOC", "club_id":79506,"urlMembri":"https://api.chess.com/pub/club/i-4-formaggi-doc/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79506.375b4d1c.50x50o.139f82627007.png","url":"https://www.chess.com/club/i-4-formaggi-doc","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "vittorieConclusi":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
 teams['i-4-scacchi-di-lasagne']={"name":"I 4 Scacchi di Lasagne","club_id":79504,"urlMembri":"https://api.chess.com/pub/club/i-4-scacchi-di-lasagne/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79504.5a4934a4.50x50o.53f1ca78f01e.png","url":"https://www.chess.com/club/i-4-scacchi-di-lasagne","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "vittorieConclusi":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
@@ -111,6 +111,28 @@ matchs[116] = {"id":"https://api.chess.com/pub/match/1267507", "penalità1":0, "
 
 
 function elabora() {
+    //Con il cambio del nomi non si vedono più i giocatori
+    teams['gli-ultimi-saranno-i-primi'].giocatori = [];
+    teams['gli-ultimi-saranno-i-primi'].giocatori.push('tarlato');
+    teams['gli-ultimi-saranno-i-primi'].giocatori.push('revruckus');
+    teams['gli-ultimi-saranno-i-primi'].giocatori.push('4lessandroid');
+    teams['gli-ultimi-saranno-i-primi'].giocatori.push('vittoriagiuseppe');
+    teams['gli-ultimi-saranno-i-primi'].giocatori.push('southitaly');
+    teams['gli-ultimi-saranno-i-primi'].giocatori.push('mlamdmar');
+    teams['gli-ultimi-saranno-i-primi'].giocatori.push('lupo59');
+    teams['gli-ultimi-saranno-i-primi'].giocatori.push('pelargonico');
+    teams['gli-ultimi-saranno-i-primi'].giocatori.push('napoli67');
+    creaGiocatore('tarlato', 'gli-ultimi-saranno-i-primi');
+    creaGiocatore('revruckus', 'gli-ultimi-saranno-i-primi');
+    creaGiocatore('4lessandroid', 'gli-ultimi-saranno-i-primi');
+    creaGiocatore('vittoriagiuseppe', 'gli-ultimi-saranno-i-primi');
+    creaGiocatore('southitaly', 'gli-ultimi-saranno-i-primi');
+    creaGiocatore('mlamdmar', 'gli-ultimi-saranno-i-primi');
+    creaGiocatore('lupo59', 'gli-ultimi-saranno-i-primi');
+    creaGiocatore('pelargonico', 'gli-ultimi-saranno-i-primi');
+    creaGiocatore('napoli67', 'gli-ultimi-saranno-i-primi');
+    teams['gli-ultimi-saranno-i-primi'].daCaricare = false;
+
     //Carico i dati di tutti i teams
     for (var i in teams) {
         sleep(50);
@@ -121,13 +143,13 @@ function elabora() {
 function caricaTeams(urlMembri) {
 
     console.log('Inzio caricaTeams: ' + urlMembri)
-    
+
     //Leggo i dati 
     $.getJSON(urlMembri,function(data){
 
         //Cerco teams, potrebbero non arrivare in ordine corretto
         for (var myTeam in teams) {
-            if (this.url.indexOf(myTeam) > -1)
+            if (this.url.indexOf(myTeam) > -1 && teams[myTeam].urlMembri != '')
             {
 
                 console.log('Letti dati team: ' + myTeam + ' - ' + this.url);
