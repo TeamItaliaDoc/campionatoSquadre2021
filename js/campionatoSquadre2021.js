@@ -4,16 +4,16 @@ var calcolaClassificaRun = false;
 var classificaTeams = [];
 
 var teams = [];
-    teams['la-compagnia-del-pedone']={"giocatori" : [7, 6, 4], "name":"La Compagnia del pedone","club_id":"79546","urlMembri":"https://api.chess.com/pub/club/la-compagnia-del-pedone/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79546.38e2b340.50x50o.a971b3dfe492.jpeg","url":"https://www.chess.com/club/members/la-compagnia-del-pedone","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-    teams['gli-hobbit']={"giocatori" : [4, 4, 4], "name":"Gli Hobbit","club_id":"79506","urlMembri":"https://api.chess.com/pub/club/gli-hobbit/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79506.8468fb6a.50x50o.17314a5f09b6.jpeg","url":"https://www.chess.com/club/gli-hobbit","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-    teams['i-cavalieri-di-rohan']={"giocatori" : [8, 5, 6], "name":"I Cavalieri di Rohan","club_id":"79318","urlMembri":"https://api.chess.com/pub/club/i-cavalieri-di-rohan/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79318.a6511232.50x50o.be143ab30f5f.jpeg","url":"https://www.chess.com/club/i-cavalieri-di-rohan","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-    teams['gli-orchi']={"giocatori" : [7, 6, 6], "name":"Gli Orchi","club_id":"79540","urlMembri":"https://api.chess.com/pub/club/gli-orchi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79540.e255cc72.50x50o.48021d861633.jpeg","url":"https://www.chess.com/club/gli-orchi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-    teams['i-maghi']={"giocatori" : [6, 5, 4], "name":"I Maghi","club_id":"79502","urlMembri":"https://api.chess.com/pub/club/i-maghi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79502.b75fdfae.50x50o.0a297dc7e44f.jpeg","url":"https://www.chess.com/club/i-maghi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-    teams['gli-elfi']={"giocatori" : [5, 7, 6], "name":"Gli Elfi","club_id":"314359","urlMembri":"https://api.chess.com/pub/club/gli-elfi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/314359.206070d7.50x50o.b991528c9bc7.jpeg","url":"https://www.chess.com/club/gli-elfi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-teams['i-draghi']={"giocatori" : [4, 4, 5], "name":"I Draghi","club_id":"79504","urlMembri":"https://api.chess.com/pub/club/i-draghi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79504.086965a7.50x50o.1be703914964.jpeg","url":"https://www.chess.com/club/i-draghi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-teams['le-aquile']={"giocatori" : [10, 7, 8], "name":"Le Aquile","club_id":"79510","urlMembri":"https://api.chess.com/pub/club/le-aquile/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79510.4181dfde.50x50o.184a579f3e5b.jpeg","url":"https://www.chess.com/club/le-aquile","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-    teams['gli-ent']={"giocatori" : [7, 6, 5], "name":"Gli Ent","club_id":"79544","urlMembri":"https://api.chess.com/pub/club/gli-ent/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79544.44efa9b7.50x50o.d7b6c5f9c44d.jpeg","url":"https://www.chess.com/club/gli-ent","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
-    teams['i-raminghi']={"giocatori" : [10, 9, 8], "name":"I Raminghi","club_id":"314357","urlMembri":"https://api.chess.com/pub/club/i-raminghi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/314357.e9b24b53.50x50o.dfad8176dedb.jpeg","url":"https://www.chess.com/club/i-raminghi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+    teams['la-compagnia-del-pedone']={"giocatori" : [7, 6, 4, 4], "name":"La Compagnia del pedone","club_id":"79546","urlMembri":"https://api.chess.com/pub/club/la-compagnia-del-pedone/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79546.38e2b340.50x50o.a971b3dfe492.jpeg","url":"https://www.chess.com/club/members/la-compagnia-del-pedone","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+    teams['gli-hobbit']={"giocatori" : [4, 4, 4, 3], "name":"Gli Hobbit","club_id":"79506","urlMembri":"https://api.chess.com/pub/club/gli-hobbit/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79506.8468fb6a.50x50o.17314a5f09b6.jpeg","url":"https://www.chess.com/club/gli-hobbit","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+    teams['i-cavalieri-di-rohan']={"giocatori" : [8, 5, 6, 4], "name":"I Cavalieri di Rohan","club_id":"79318","urlMembri":"https://api.chess.com/pub/club/i-cavalieri-di-rohan/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79318.a6511232.50x50o.be143ab30f5f.jpeg","url":"https://www.chess.com/club/i-cavalieri-di-rohan","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+    teams['gli-orchi']={"giocatori" : [7, 6, 6, 5], "name":"Gli Orchi","club_id":"79540","urlMembri":"https://api.chess.com/pub/club/gli-orchi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79540.e255cc72.50x50o.48021d861633.jpeg","url":"https://www.chess.com/club/gli-orchi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+    teams['i-maghi']={"giocatori" : [6, 5, 4, 5], "name":"I Maghi","club_id":"79502","urlMembri":"https://api.chess.com/pub/club/i-maghi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79502.b75fdfae.50x50o.0a297dc7e44f.jpeg","url":"https://www.chess.com/club/i-maghi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+    teams['gli-elfi']={"giocatori" : [5, 7, 6, 7], "name":"Gli Elfi","club_id":"314359","urlMembri":"https://api.chess.com/pub/club/gli-elfi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/314359.206070d7.50x50o.b991528c9bc7.jpeg","url":"https://www.chess.com/club/gli-elfi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+teams['i-draghi']={"giocatori" : [4, 4, 5, 5], "name":"I Draghi","club_id":"79504","urlMembri":"https://api.chess.com/pub/club/i-draghi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79504.086965a7.50x50o.1be703914964.jpeg","url":"https://www.chess.com/club/i-draghi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+teams['le-aquile']={"giocatori" : [10, 7, 8, 12], "name":"Le Aquile","club_id":"79510","urlMembri":"https://api.chess.com/pub/club/le-aquile/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79510.4181dfde.50x50o.184a579f3e5b.jpeg","url":"https://www.chess.com/club/le-aquile","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+    teams['gli-ent']={"giocatori" : [7, 6, 5, 4], "name":"Gli Ent","club_id":"79544","urlMembri":"https://api.chess.com/pub/club/gli-ent/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79544.44efa9b7.50x50o.d7b6c5f9c44d.jpeg","url":"https://www.chess.com/club/gli-ent","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
+    teams['i-raminghi']={"giocatori" : [10, 9, 8, 12], "name":"I Raminghi","club_id":"314357","urlMembri":"https://api.chess.com/pub/club/i-raminghi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/314357.e9b24b53.50x50o.dfad8176dedb.jpeg","url":"https://www.chess.com/club/i-raminghi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
 
 //teams['team-emilia-romagna']={"giocatori" : [10, 9], "name":"I Raminghi","club_id":"314357","urlMembri":"https://api.chess.com/pub/club/i-raminghi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/314357.e9b24b53.50x50o.dfad8176dedb.jpeg","url":"https://www.chess.com/club/i-raminghi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
 //teams['team-piemonte']={"giocatori" : [10, 9], "name":"I Raminghi","club_id":"314357","urlMembri":"https://api.chess.com/pub/club/i-raminghi/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/314357.e9b24b53.50x50o.dfad8176dedb.jpeg","url":"https://www.chess.com/club/i-raminghi","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
@@ -41,15 +41,15 @@ matchs[33] = {"id":"https://api.chess.com/pub/match/1328121", "penalità1":0, "p
 matchs[34] = {"id":"https://api.chess.com/pub/match/1328123", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[35] = {"id":"https://api.chess.com/pub/match/1328127", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 
-/*
-matchs[41] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[42] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[43] = {"id":"https://api.chess.com/pub/match/", "penalità1":0.5, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[44] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[45] = {"id":"https://api.chess.com/pub/match/", "penalità1":0.5, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[41] = {"id":"https://api.chess.com/pub/match/1344065", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[42] = {"id":"https://api.chess.com/pub/match/1344059", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[43] = {"id":"https://api.chess.com/pub/match/1344055", "penalità1":0.5, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[44] = {"id":"https://api.chess.com/pub/match/1344061", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+//matchs[45] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 
-matchs[51] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[52] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+/*
+matchs[51] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[52] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[53] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[54] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[55] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
@@ -57,26 +57,26 @@ matchs[55] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalit�
 matchs[61] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[62] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[63] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[64] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[64] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[65] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 
 matchs[71] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[72] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[72] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[73] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[74] = {"id":"https://api.chess.com/pub/match/", "penalità1":0.5, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[74] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[75] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 
-matchs[81] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[81] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[82] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[83] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[83] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[84] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[85] = {"id":"https://api.chess.com/pub/match/", "penalità1":0.5, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[85] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 
 matchs[91] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[92] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[93] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0.5, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[92] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[93] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[94] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[95] = {"id":"https://api.chess.com/pub/match/", "penalità1":0.5, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[95] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 */
 
 
@@ -391,7 +391,18 @@ function caricaMatch(index, url)
             return;  
             calcolaClassificaRun = true;
 
-         console.log('caricaMatch. Inizio getAvatar');
+        //Aggiungo partite perse a tavolino    
+        matchs[45] = {"id":"", "penalità1":0, "penalità2":0, "daCaricare":false, "PuntiMatch1":1, "PuntiMatch2":0, "concluso": true, "Punti1":0, "Punti2":-1, "nGiocatori1":0,  "nGiocatori2":0};
+        matchs[45].team1 = 'i-draghi';
+        matchs[45].team2 = 'gli-hobbit';
+        matchs[45].boards = 0;
+        teams['i-draghi'].matchConclusi ++;
+        teams['gli-hobbit'].matchConclusi ++;
+        teams['i-draghi'].puntiConclusi += matchs[index].Punti1;
+        teams['gli-hobbit'].puntiConclusi += matchs[index].Punti2;
+        teams['i-draghi'].puntiMatchConclusi ++;
+
+        console.log('caricaMatch. Inizio getAvatar');
 
          //Ricerco elo e stampo classifica giocatori
         getAvatar();
@@ -567,7 +578,7 @@ function calcolaClassifica()
                 }
 
                 //Se la partita esiste
-                if (boards > 0)
+                if (boards > -1)
                 {
                     //Se terminata
                     if (partitaConclusa)
@@ -582,14 +593,24 @@ function calcolaClassifica()
                         //Vinto team 1
                         if (Punti1 > Punti2)
                         {
-                            risultato = penalità1 + '1 - 0'  + penalità2 +  ' <BR> (' + Punti1 + ' - ' + Punti2 + ')';
+                            if (Punti2  > -1)  //Se -1 persa a tavolino
+                            {
+                                risultato = penalità1 + '1 - 0'  + penalità2 +  ' <BR> (' + Punti1 + ' - ' + Punti2 + ')';
+                            } else {
+                                risultato = penalità1 + '1 - 0'  + penalità2;
+                            }
                             stileTD = 'style="background-color:#4bc74b;border: 1px solid black;"'; //VINTO
                             stile = 'color:black;font-weight: bold;';
                         } 
                         //Vinto team 2
                         if (Punti1 < Punti2)
                         {
-                            risultato = penalità1 + '0 - 1' + penalità2 + ' <BR> (' + Punti1 + ' - ' + Punti2 + ')';
+                            if (Punti1  > -1)  //Se -1 persa a tavolino
+                            {
+                                risultato = penalità1 + '0 - 1' + penalità2 + ' <BR> (' + Punti1 + ' - ' + Punti2 + ')';
+                            } else {
+                                risultato = penalità1 + '0 - 1' + penalità2;
+                            }
                             stileTD = 'style="background-color:#f75959;border: 1px solid black;"';  //PERSO
                             stile = 'color:black;font-weight: bold;';
                         } 
