@@ -22,7 +22,6 @@ var matchs = [];
 
 
 //matchs[00] = {"id":"https://api.chess.com/pub/match/1236552", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-
 matchs[11] = {"id":"https://api.chess.com/pub/match/1301681", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[12] = {"id":"https://api.chess.com/pub/match/1301683", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[13] = {"id":"https://api.chess.com/pub/match/1301691", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
@@ -43,7 +42,7 @@ matchs[35] = {"id":"https://api.chess.com/pub/match/1328127", "penalità1":0, "p
 
 matchs[41] = {"id":"https://api.chess.com/pub/match/1344065", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[42] = {"id":"https://api.chess.com/pub/match/1344059", "penalità1":0, "penalità2":0,  "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
-matchs[43] = {"id":"https://api.chess.com/pub/match/1344055", "penalità1":0.5, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
+matchs[43] = {"id":"https://api.chess.com/pub/match/1344055", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[44] = {"id":"https://api.chess.com/pub/match/1344061", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 //matchs[45] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "daCaricare":true, "PuntiMatch1":0, "PuntiMatch2":0, "concluso": false, "Punti1":0, "Punti2":0, "nGiocatori1":0,  "nGiocatori2":0};
 
