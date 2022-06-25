@@ -56,6 +56,7 @@ matchs[55] = {"id":"https://api.chess.com/pub/match/1356255", "penalità1":0, "p
 
 matchs[61] = {"id":"https://api.chess.com/pub/match/1366321", "penalità1":0, "penalità2":0, "boardsPenalità":0, "daCaricare":true,  "concluso": false, "Punti1":0, "Punti2":0,"PuntiBannati":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[62] = {"id":"https://api.chess.com/pub/match/1366323", "penalità1":0, "penalità2":0, "boardsPenalità":0, "daCaricare":true,  "concluso": false, "Punti1":0, "Punti2":0,"PuntiBannati":0, "nGiocatori1":0,  "nGiocatori2":0};
+
 matchs[63] = {"id":"https://api.chess.com/pub/match/1366317", "penalità1":0, "penalità2":0, "boardsPenalità":0, "daCaricare":true,  "concluso": false, "Punti1":0, "Punti2":0,"PuntiBannati":0, "nGiocatori1":0,  "nGiocatori2":0};
 matchs[64] = {"id":"https://api.chess.com/pub/match/1366319", "penalità1":0, "penalità2":0, "boardsPenalità":0, "daCaricare":true,  "concluso": false, "Punti1":0, "Punti2":0,"PuntiBannati":0, "nGiocatori1":0,  "nGiocatori2":0};
 //matchs[65] = {"id":"https://api.chess.com/pub/match/", "penalità1":0, "penalità2":0, "boardsPenalità":0, "daCaricare":false,  "concluso": false, "Punti1":0, "Punti2":0,"PuntiBannati":0, "nGiocatori1":0,  "nGiocatori2":0};
@@ -227,13 +228,14 @@ function caricaMatch(index, url)
             var team2 = data.teams.team2.url.substr(27, data.teams.team2.url.length-27);
 
             //salvo bannati della partita
-            var bannatiBoard = [];
+            var bannatiBoard1 = [];
+            var bannatiBoard2 = [];
             for (var i in data.teams.team1.players) {
                 if (! data.teams.team1.players[i])
                     console.log(data.teams.team1.players[i]);
                     if (! data.teams.team2.players[i])
                     console.log(data.teams.team2.players[i]);
-            
+            /* Considero come bannati quelli restituiti nel js
                 if (data.teams.team1.players[i].status == 'closed:fair_play_violations' ) {
                     bannatiBoard.push(data.teams.team1.players[i].board);
                     bannati.push(data.teams.team1.players[i].username);
@@ -243,13 +245,35 @@ function caricaMatch(index, url)
                     bannati.push(data.teams.team2.players[i].username);
                 }
             }
+            */
+                for (var iBannato in data.teams.team1.fair_play_removals) {
+                    var username = data.teams.team1.fair_play_removals[iBannato];
+                    bannati.push(username);
+                    for (var i in data.teams.team1.players) {
+                        if (data.teams.team1.players[i].username == username) {
+                            bannatiBoard1.push(data.teams.team1.players[i].board);
+                        }
+                    }
+                }
+                for (var iBannato in data.teams.team2.fair_play_removals) {
+                    var username = data.teams.team2.fair_play_removals[iBannato];
+                    bannati.push(username);
+                    for (var i in data.teams.team2.players) {
+                        if (data.teams.team2.players[i].username == username) {
+                            bannatiBoard2.push(data.teams.team2.players[i].board);
+                        }
+                    }
+                }
+            }
+
             //Calcolo punti
             for (var i in data.teams.team1.players) {
                 //Punti Team 1
-                if (data.teams.team1.players[i].status != 'closed:fair_play_violations') { //Se non è stato bannato
-//??                    if ( bannatiBoard.indexOf(data.teams.team1.players[i].board) > -1) {  //Se è stato bannato avversario
-//??                        matchs[index].Punti1 += 2;  //Vale per entrambe le partite
-//??                    } else {
+                //if (data.teams.team1.players[i].status != 'closed:fair_play_violations') { //Se non è stato bannato
+                if ( bannatiBoard1.indexOf(data.teams.team1.players[i].board) == -1) {  //Se non stato bannato 
+                    if ( bannatiBoard2.indexOf(data.teams.team1.players[i].board) > -1) {  //Se è stato bannato avversario
+                        matchs[index].Punti1 += 2;  //Vale per entrambe le partite
+                    } else {
                         if (data.teams.team1.players[i].played_as_black == 'win') {
                             matchs[index].Punti1 ++;
                         } else {
@@ -268,9 +292,9 @@ function caricaMatch(index, url)
                                 }
                             }
                         }
-//??                    } 
-                } else {  //è stato bannato
-                    if (data.teams.team1.players[i].played_as_black == 'win') {
+                    } 
+                /*??? } else {  //è stato bannato
+                     if (data.teams.team1.players[i].played_as_black == 'win') {
                         matchs[index].PuntiBannati ++;
                     } else {
                         if ((data.teams.team1.players[i].played_as_black == 'agreed') || (data.teams.team1.players[i].played_as_black == 'repetition')  || (data.teams.team1.players[i].played_as_black == 'timevsinsufficient') || 
@@ -288,13 +312,14 @@ function caricaMatch(index, url)
                             }
                         }
                     }
-
+                */
                 }
                 //Punti Team 2
-                if (data.teams.team2.players[i].status != 'closed:fair_play_violations') { //Se non è stato bannato
-//??                    if ( bannatiBoard.indexOf(data.teams.team2.players[i].board) > -1) {  //Se è stato bannato avversario
-//??                        matchs[index].Punti2 += 2;  //Vale per entrambe le partite
-//??                    } else {
+                //???????if (data.teams.team2.players[i].status != 'closed:fair_play_violations') { //Se non è stato bannato
+                    if ( bannatiBoard2.indexOf(data.teams.team1.players[i].board) == -1) {  //Se non stato bannato 
+                        if ( bannatiBoard1.indexOf(data.teams.team2.players[i].board) > -1) {  //Se è stato bannato avversario
+                        matchs[index].Punti2 += 2;  //Vale per entrambe le partite
+                    } else {
                         if (data.teams.team2.players[i].played_as_black == 'win') {
                             matchs[index].Punti2 ++;
                         } else {
@@ -314,8 +339,8 @@ function caricaMatch(index, url)
                                 }
                             }
                         }
-//??                    }
-                } else {
+                    }
+                /* ???} else {
                     if (data.teams.team2.players[i].played_as_black == 'win') {
                         matchs[index].PuntiBannati ++;
                     } else {
@@ -334,9 +359,9 @@ function caricaMatch(index, url)
                                 
                             }
                         }
-                    }
+                    } ?? */
 
-                }
+                }   
             }
 
             //Penalità assegnate
@@ -372,7 +397,7 @@ function caricaMatch(index, url)
             console.log('---- 2 3: ' + matchs[index].PuntiBannati);
 
 
-            if ((matchs[index].boards * 2) + (matchs[index].boardsPenalità * 2) + (matchs[index].penalità1 + matchs[index].penalità2) == matchs[index].Punti1 + matchs[index].Punti2  + matchs[index].PuntiBannati)
+            if ((matchs[index].boards * 2) + (matchs[index].boardsPenalità * 2) + (matchs[index].penalità1 + matchs[index].penalità2) == matchs[index].Punti1 + matchs[index].Punti2) // ???????  + matchs[index].PuntiBannati)
             {
                 matchs[index].concluso = true;
                 //
@@ -405,18 +430,18 @@ function caricaMatch(index, url)
                 username1 = data.teams.team1.players[i].username;
                 username2 = data.teams.team2.players[i].username;
                 risultato = data.teams.team1.players[i].played_as_white;
-                if ( bannatiBoard.indexOf(data.teams.team1.players[i].board) > -1)   //Se è stato bannato avversario
+                if ( bannatiBoard2.indexOf(data.teams.team1.players[i].board) > -1)   //Se è stato bannato avversario
                     risultato = 'win';
                 setPunti(username1, risultato);
                 risultato = data.teams.team1.players[i].played_as_black;
-                if ( bannatiBoard.indexOf(data.teams.team1.players[i].board) > -1)   //Se è stato bannato avversario
+                if ( bannatiBoard2.indexOf(data.teams.team1.players[i].board) > -1)   //Se è stato bannato avversario
                     risultato = 'win';
                 setPunti(username1, risultato);
                 risultato = data.teams.team2.players[i].played_as_white;
-                if ( bannatiBoard.indexOf(data.teams.team2.players[i].board) > -1)  //Se è stato bannato avversario
+                if ( bannatiBoard1.indexOf(data.teams.team2.players[i].board) > -1)  //Se è stato bannato avversario
                     risultato = 'win';
                 setPunti(username2, risultato);
-                if ( bannatiBoard.indexOf(data.teams.team2.players[i].board) > -1)  //Se è stato bannato avversario
+                if ( bannatiBoard1.indexOf(data.teams.team2.players[i].board) > -1)  //Se è stato bannato avversario
                     risultato = 'win';
                 risultato = data.teams.team2.players[i].played_as_black;
                 setPunti(username2, risultato);
