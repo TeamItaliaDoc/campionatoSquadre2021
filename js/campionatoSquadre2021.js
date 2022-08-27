@@ -3,6 +3,9 @@ var calcolaTeamsRun = false;
 var calcolaClassificaRun = false;
 var classificaTeams = [];
 
+var dataFine = new Date(2022, 08, 1, 0, 0, 0, 0);
+
+
 var teams = [];
     teams['la-compagnia-del-pedone']={"giocatori" : [7, 6, 4, 4,5,5,5,4,5], "name":"La Compagnia del pedone","club_id":"79546","urlMembri":"https://api.chess.com/pub/club/la-compagnia-del-pedone/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79546.38e2b340.50x50o.a971b3dfe492.jpeg","url":"https://www.chess.com/club/members/la-compagnia-del-pedone","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
     teams['gli-hobbit']={"giocatori" : [4, 4, 4, 3,4,2,3,3,4], "name":"Gli Hobbit","club_id":"79506","urlMembri":"https://api.chess.com/pub/club/gli-hobbit/members","icon":"https://images.chesscomfiles.com/uploads/v1/group/79506.8468fb6a.50x50o.17314a5f09b6.jpeg","url":"https://www.chess.com/club/gli-hobbit","puntiSpareggio":0, "posizione":0, "matchConclusi":0, "puntiConclusi":0, "puntiMatchConclusi":0, "giocatoriRegistrati":0, "mediaConclusi":0, "finaleConclusi":"","teamVinte" : [], "teamPatte" : [], "penalità":0, "penalitàTotali":0, "daCaricare":true};
@@ -397,7 +400,9 @@ function caricaMatch(index, url)
             console.log('---- 2 3: ' + matchs[index].PuntiBannati);
 
 
-            if ((matchs[index].boards * 2) + (matchs[index].boardsPenalità * 2) + (matchs[index].penalità1 + matchs[index].penalità2) == matchs[index].Punti1 + matchs[index].Punti2) // ???????  + matchs[index].PuntiBannati)
+            var adesso = new Date();
+            if ( ((matchs[index].boards * 2) + (matchs[index].boardsPenalità * 2) + (matchs[index].penalità1 + matchs[index].penalità2) == matchs[index].Punti1 + matchs[index].Punti2) ||
+                    (dataFine < adesso) )  //Se ho superato la data di fine
             {
                 matchs[index].concluso = true;
                 //
